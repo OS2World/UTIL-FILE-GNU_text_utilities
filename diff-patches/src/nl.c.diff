@@ -1,0 +1,10 @@
+--- old/textutils-2.0/src/nl.c	Sun Jul  4 10:02:54 1999
++++ gnu/textutils-2.0/src/nl.c	Sun Nov 25 01:07:14 2001
+@@ -448,6 +448,7 @@
+   int c, exit_status = 0;
+   size_t len;
+ 
++  initialize_main(&argc, &argv);
+   program_name = argv[0];
+   setlocale (LC_ALL, "");
+   bindtextdomain (PACKAGE, LOCALEDIR);

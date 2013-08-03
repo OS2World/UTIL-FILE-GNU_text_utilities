@@ -1,0 +1,10 @@
+--- old/textutils-2.0/src/cat.c	Tue May 18 14:12:02 1999
++++ gnu/textutils-2.0/src/cat.c	Mon Nov 26 20:39:20 2001
+@@ -532,6 +532,7 @@
+     {NULL, 0, NULL, 0}
+   };
+ 
++  initialize_main(&argc, &argv);
+   program_name = argv[0];
+   setlocale (LC_ALL, "");
+   bindtextdomain (PACKAGE, LOCALEDIR);

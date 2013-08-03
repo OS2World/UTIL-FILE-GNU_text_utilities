@@ -1,0 +1,10 @@
+--- old/textutils-2.0/src/csplit.c	Fri May  7 19:14:46 1999
++++ gnu/textutils-2.0/src/csplit.c	Sat Oct 20 22:14:26 2001
+@@ -1378,6 +1378,7 @@
+   struct sigaction oldact, newact;
+ #endif
+ 
++  initialize_main(&argc, &argv);
+   program_name = argv[0];
+   setlocale (LC_ALL, "");
+   bindtextdomain (PACKAGE, LOCALEDIR);

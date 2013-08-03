@@ -1,0 +1,338 @@
+--- old/textutils-2.0/tests/head/head-tests	Fri Jan 29 13:56:18 1999
++++ gnu/textutils-2.0/tests/head/head-tests	Sun Oct 21 00:18:04 2001
+@@ -24,13 +24,13 @@
+   $echo "Test idem-0 failed: ../../src/head return code $code differs from expected value 0" 1>&2
+   errors=`expr $errors + 1`
+ else
+-  cmp idem-0.O $srcdir/idem-0.X > /dev/null 2>&1
++  diff -a idem-0.O $srcdir/idem-0.X > /dev/null 2>&1
+   case $? in
+     0) if test "$VERBOSE" ; then $echo "passed idem-0"; fi ;;
+     1) $echo "Test idem-0 failed: files idem-0.O and $srcdir/idem-0.X differ" 1>&2;
+        errors=`expr $errors + 1` ;;
+     2) $echo "Test idem-0 may have failed." 1>&2;
+-       $echo The command "cmp idem-0.O $srcdir/idem-0.X" failed. 1>&2 ;
++       $echo The command "diff -a idem-0.O $srcdir/idem-0.X" failed. 1>&2 ;
+        errors=`expr $errors + 1` ;;
+   esac
+ fi
+@@ -41,13 +41,13 @@
+   $echo "Test idem-1 failed: ../../src/head return code $code differs from expected value 0" 1>&2
+   errors=`expr $errors + 1`
+ else
+-  cmp idem-1.O $srcdir/idem-1.X > /dev/null 2>&1
++  diff -a idem-1.O $srcdir/idem-1.X > /dev/null 2>&1
+   case $? in
+     0) if test "$VERBOSE" ; then $echo "passed idem-1"; fi ;;
+     1) $echo "Test idem-1 failed: files idem-1.O and $srcdir/idem-1.X differ" 1>&2;
+        errors=`expr $errors + 1` ;;
+     2) $echo "Test idem-1 may have failed." 1>&2;
+-       $echo The command "cmp idem-1.O $srcdir/idem-1.X" failed. 1>&2 ;
++       $echo The command "diff -a idem-1.O $srcdir/idem-1.X" failed. 1>&2 ;
+        errors=`expr $errors + 1` ;;
+   esac
+ fi
+@@ -58,13 +58,13 @@
+   $echo "Test idem-2 failed: ../../src/head return code $code differs from expected value 0" 1>&2
+   errors=`expr $errors + 1`
+ else
+-  cmp idem-2.O $srcdir/idem-2.X > /dev/null 2>&1
++  diff -a idem-2.O $srcdir/idem-2.X > /dev/null 2>&1
+   case $? in
+     0) if test "$VERBOSE" ; then $echo "passed idem-2"; fi ;;
+     1) $echo "Test idem-2 failed: files idem-2.O and $srcdir/idem-2.X differ" 1>&2;
+        errors=`expr $errors + 1` ;;
+     2) $echo "Test idem-2 may have failed." 1>&2;
+-       $echo The command "cmp idem-2.O $srcdir/idem-2.X" failed. 1>&2 ;
++       $echo The command "diff -a idem-2.O $srcdir/idem-2.X" failed. 1>&2 ;
+        errors=`expr $errors + 1` ;;
+   esac
+ fi
+@@ -75,13 +75,13 @@
+   $echo "Test idem-3 failed: ../../src/head return code $code differs from expected value 0" 1>&2
+   errors=`expr $errors + 1`
+ else
+-  cmp idem-3.O $srcdir/idem-3.X > /dev/null 2>&1
++  diff -a idem-3.O $srcdir/idem-3.X > /dev/null 2>&1
+   case $? in
+     0) if test "$VERBOSE" ; then $echo "passed idem-3"; fi ;;
+     1) $echo "Test idem-3 failed: files idem-3.O and $srcdir/idem-3.X differ" 1>&2;
+        errors=`expr $errors + 1` ;;
+     2) $echo "Test idem-3 may have failed." 1>&2;
+-       $echo The command "cmp idem-3.O $srcdir/idem-3.X" failed. 1>&2 ;
++       $echo The command "diff -a idem-3.O $srcdir/idem-3.X" failed. 1>&2 ;
+        errors=`expr $errors + 1` ;;
+   esac
+ fi
+@@ -92,13 +92,13 @@
+   $echo "Test basic-0-10 failed: ../../src/head return code $code differs from expected value 0" 1>&2
+   errors=`expr $errors + 1`
+ else
+-  cmp basic-0-10.O $srcdir/basic-0-10.X > /dev/null 2>&1
++  diff -a basic-0-10.O $srcdir/basic-0-10.X > /dev/null 2>&1
+   case $? in
+     0) if test "$VERBOSE" ; then $echo "passed basic-0-10"; fi ;;
+     1) $echo "Test basic-0-10 failed: files basic-0-10.O and $srcdir/basic-0-10.X differ" 1>&2;
+        errors=`expr $errors + 1` ;;
+     2) $echo "Test basic-0-10 may have failed." 1>&2;
+-       $echo The command "cmp basic-0-10.O $srcdir/basic-0-10.X" failed. 1>&2 ;
++       $echo The command "diff -a basic-0-10.O $srcdir/basic-0-10.X" failed. 1>&2 ;
+        errors=`expr $errors + 1` ;;
+   esac
+ fi
+@@ -109,13 +109,13 @@
+   $echo "Test basic-0-09 failed: ../../src/head return code $code differs from expected value 0" 1>&2
+   errors=`expr $errors + 1`
+ else
+-  cmp basic-0-09.O $srcdir/basic-0-09.X > /dev/null 2>&1
++  diff -a basic-0-09.O $srcdir/basic-0-09.X > /dev/null 2>&1
+   case $? in
+     0) if test "$VERBOSE" ; then $echo "passed basic-0-09"; fi ;;
+     1) $echo "Test basic-0-09 failed: files basic-0-09.O and $srcdir/basic-0-09.X differ" 1>&2;
+        errors=`expr $errors + 1` ;;
+     2) $echo "Test basic-0-09 may have failed." 1>&2;
+-       $echo The command "cmp basic-0-09.O $srcdir/basic-0-09.X" failed. 1>&2 ;
++       $echo The command "diff -a basic-0-09.O $srcdir/basic-0-09.X" failed. 1>&2 ;
+        errors=`expr $errors + 1` ;;
+   esac
+ fi
+@@ -126,13 +126,13 @@
+   $echo "Test basic-0-11 failed: ../../src/head return code $code differs from expected value 0" 1>&2
+   errors=`expr $errors + 1`
+ else
+-  cmp basic-0-11.O $srcdir/basic-0-11.X > /dev/null 2>&1
++  diff -a basic-0-11.O $srcdir/basic-0-11.X > /dev/null 2>&1
+   case $? in
+     0) if test "$VERBOSE" ; then $echo "passed basic-0-11"; fi ;;
+     1) $echo "Test basic-0-11 failed: files basic-0-11.O and $srcdir/basic-0-11.X differ" 1>&2;
+        errors=`expr $errors + 1` ;;
+     2) $echo "Test basic-0-11 may have failed." 1>&2;
+-       $echo The command "cmp basic-0-11.O $srcdir/basic-0-11.X" failed. 1>&2 ;
++       $echo The command "diff -a basic-0-11.O $srcdir/basic-0-11.X" failed. 1>&2 ;
+        errors=`expr $errors + 1` ;;
+   esac
+ fi
+@@ -143,13 +143,13 @@
+   $echo "Test obs-0 failed: ../../src/head return code $code differs from expected value 0" 1>&2
+   errors=`expr $errors + 1`
+ else
+-  cmp obs-0.O $srcdir/obs-0.X > /dev/null 2>&1
++  diff -a obs-0.O $srcdir/obs-0.X > /dev/null 2>&1
+   case $? in
+     0) if test "$VERBOSE" ; then $echo "passed obs-0"; fi ;;
+     1) $echo "Test obs-0 failed: files obs-0.O and $srcdir/obs-0.X differ" 1>&2;
+        errors=`expr $errors + 1` ;;
+     2) $echo "Test obs-0 may have failed." 1>&2;
+-       $echo The command "cmp obs-0.O $srcdir/obs-0.X" failed. 1>&2 ;
++       $echo The command "diff -a obs-0.O $srcdir/obs-0.X" failed. 1>&2 ;
+        errors=`expr $errors + 1` ;;
+   esac
+ fi
+@@ -160,13 +160,13 @@
+   $echo "Test obs-1 failed: ../../src/head return code $code differs from expected value 0" 1>&2
+   errors=`expr $errors + 1`
+ else
+-  cmp obs-1.O $srcdir/obs-1.X > /dev/null 2>&1
++  diff -a obs-1.O $srcdir/obs-1.X > /dev/null 2>&1
+   case $? in
+     0) if test "$VERBOSE" ; then $echo "passed obs-1"; fi ;;
+     1) $echo "Test obs-1 failed: files obs-1.O and $srcdir/obs-1.X differ" 1>&2;
+        errors=`expr $errors + 1` ;;
+     2) $echo "Test obs-1 may have failed." 1>&2;
+-       $echo The command "cmp obs-1.O $srcdir/obs-1.X" failed. 1>&2 ;
++       $echo The command "diff -a obs-1.O $srcdir/obs-1.X" failed. 1>&2 ;
+        errors=`expr $errors + 1` ;;
+   esac
+ fi
+@@ -177,13 +177,13 @@
+   $echo "Test obs-2 failed: ../../src/head return code $code differs from expected value 0" 1>&2
+   errors=`expr $errors + 1`
+ else
+-  cmp obs-2.O $srcdir/obs-2.X > /dev/null 2>&1
++  diff -a obs-2.O $srcdir/obs-2.X > /dev/null 2>&1
+   case $? in
+     0) if test "$VERBOSE" ; then $echo "passed obs-2"; fi ;;
+     1) $echo "Test obs-2 failed: files obs-2.O and $srcdir/obs-2.X differ" 1>&2;
+        errors=`expr $errors + 1` ;;
+     2) $echo "Test obs-2 may have failed." 1>&2;
+-       $echo The command "cmp obs-2.O $srcdir/obs-2.X" failed. 1>&2 ;
++       $echo The command "diff -a obs-2.O $srcdir/obs-2.X" failed. 1>&2 ;
+        errors=`expr $errors + 1` ;;
+   esac
+ fi
+@@ -194,13 +194,13 @@
+   $echo "Test obs-3 failed: ../../src/head return code $code differs from expected value 0" 1>&2
+   errors=`expr $errors + 1`
+ else
+-  cmp obs-3.O $srcdir/obs-3.X > /dev/null 2>&1
++  diff -a obs-3.O $srcdir/obs-3.X > /dev/null 2>&1
+   case $? in
+     0) if test "$VERBOSE" ; then $echo "passed obs-3"; fi ;;
+     1) $echo "Test obs-3 failed: files obs-3.O and $srcdir/obs-3.X differ" 1>&2;
+        errors=`expr $errors + 1` ;;
+     2) $echo "Test obs-3 may have failed." 1>&2;
+-       $echo The command "cmp obs-3.O $srcdir/obs-3.X" failed. 1>&2 ;
++       $echo The command "diff -a obs-3.O $srcdir/obs-3.X" failed. 1>&2 ;
+        errors=`expr $errors + 1` ;;
+   esac
+ fi
+@@ -211,13 +211,13 @@
+   $echo "Test obs-4 failed: ../../src/head return code $code differs from expected value 0" 1>&2
+   errors=`expr $errors + 1`
+ else
+-  cmp obs-4.O $srcdir/in-1024 > /dev/null 2>&1
++  diff -a obs-4.O $srcdir/in-1024 > /dev/null 2>&1
+   case $? in
+     0) if test "$VERBOSE" ; then $echo "passed obs-4"; fi ;;
+     1) $echo "Test obs-4 failed: files obs-4.O and $srcdir/in-1024 differ" 1>&2;
+        errors=`expr $errors + 1` ;;
+     2) $echo "Test obs-4 may have failed." 1>&2;
+-       $echo The command "cmp obs-4.O $srcdir/in-1024" failed. 1>&2 ;
++       $echo The command "diff -a obs-4.O $srcdir/in-1024" failed. 1>&2 ;
+        errors=`expr $errors + 1` ;;
+   esac
+ fi
+@@ -228,13 +228,13 @@
+   $echo "Test obs-5 failed: ../../src/head return code $code differs from expected value 0" 1>&2
+   errors=`expr $errors + 1`
+ else
+-  cmp obs-5.O $srcdir/in-1024 > /dev/null 2>&1
++  diff -a obs-5.O $srcdir/in-1024 > /dev/null 2>&1
+   case $? in
+     0) if test "$VERBOSE" ; then $echo "passed obs-5"; fi ;;
+     1) $echo "Test obs-5 failed: files obs-5.O and $srcdir/in-1024 differ" 1>&2;
+        errors=`expr $errors + 1` ;;
+     2) $echo "Test obs-5 may have failed." 1>&2;
+-       $echo The command "cmp obs-5.O $srcdir/in-1024" failed. 1>&2 ;
++       $echo The command "diff -a obs-5.O $srcdir/in-1024" failed. 1>&2 ;
+        errors=`expr $errors + 1` ;;
+   esac
+ fi
+@@ -245,13 +245,13 @@
+   $echo "Test fail-1 failed: ../../src/head return code $code differs from expected value 0" 1>&2
+   errors=`expr $errors + 1`
+ else
+-  cmp fail-1.O $srcdir/fail-1.X > /dev/null 2>&1
++  diff -a fail-1.O $srcdir/fail-1.X > /dev/null 2>&1
+   case $? in
+     0) if test "$VERBOSE" ; then $echo "passed fail-1"; fi ;;
+     1) $echo "Test fail-1 failed: files fail-1.O and $srcdir/fail-1.X differ" 1>&2;
+        errors=`expr $errors + 1` ;;
+     2) $echo "Test fail-1 may have failed." 1>&2;
+-       $echo The command "cmp fail-1.O $srcdir/fail-1.X" failed. 1>&2 ;
++       $echo The command "diff -a fail-1.O $srcdir/fail-1.X" failed. 1>&2 ;
+        errors=`expr $errors + 1` ;;
+   esac
+ fi
+@@ -262,13 +262,13 @@
+   $echo "Test null-1 failed: ../../src/head return code $code differs from expected value 0" 1>&2
+   errors=`expr $errors + 1`
+ else
+-  cmp null-1.O $srcdir/null-1.X > /dev/null 2>&1
++  diff -a null-1.O $srcdir/null-1.X > /dev/null 2>&1
+   case $? in
+     0) if test "$VERBOSE" ; then $echo "passed null-1"; fi ;;
+     1) $echo "Test null-1 failed: files null-1.O and $srcdir/null-1.X differ" 1>&2;
+        errors=`expr $errors + 1` ;;
+     2) $echo "Test null-1 may have failed." 1>&2;
+-       $echo The command "cmp null-1.O $srcdir/null-1.X" failed. 1>&2 ;
++       $echo The command "diff -a null-1.O $srcdir/null-1.X" failed. 1>&2 ;
+        errors=`expr $errors + 1` ;;
+   esac
+ fi
+@@ -279,13 +279,13 @@
+   $echo "Test posix-0 failed: ../../src/head return code $code differs from expected value 0" 1>&2
+   errors=`expr $errors + 1`
+ else
+-  cmp posix-0.O $srcdir/posix-0.X > /dev/null 2>&1
++  diff -a posix-0.O $srcdir/posix-0.X > /dev/null 2>&1
+   case $? in
+     0) if test "$VERBOSE" ; then $echo "passed posix-0"; fi ;;
+     1) $echo "Test posix-0 failed: files posix-0.O and $srcdir/posix-0.X differ" 1>&2;
+        errors=`expr $errors + 1` ;;
+     2) $echo "Test posix-0 may have failed." 1>&2;
+-       $echo The command "cmp posix-0.O $srcdir/posix-0.X" failed. 1>&2 ;
++       $echo The command "diff -a posix-0.O $srcdir/posix-0.X" failed. 1>&2 ;
+        errors=`expr $errors + 1` ;;
+   esac
+ fi
+@@ -296,13 +296,13 @@
+   $echo "Test posix-1 failed: ../../src/head return code $code differs from expected value 0" 1>&2
+   errors=`expr $errors + 1`
+ else
+-  cmp posix-1.O $srcdir/posix-1.X > /dev/null 2>&1
++  diff -a posix-1.O $srcdir/posix-1.X > /dev/null 2>&1
+   case $? in
+     0) if test "$VERBOSE" ; then $echo "passed posix-1"; fi ;;
+     1) $echo "Test posix-1 failed: files posix-1.O and $srcdir/posix-1.X differ" 1>&2;
+        errors=`expr $errors + 1` ;;
+     2) $echo "Test posix-1 may have failed." 1>&2;
+-       $echo The command "cmp posix-1.O $srcdir/posix-1.X" failed. 1>&2 ;
++       $echo The command "diff -a posix-1.O $srcdir/posix-1.X" failed. 1>&2 ;
+        errors=`expr $errors + 1` ;;
+   esac
+ fi
+@@ -313,13 +313,13 @@
+   $echo "Test posix-2 failed: ../../src/head return code $code differs from expected value 0" 1>&2
+   errors=`expr $errors + 1`
+ else
+-  cmp posix-2.O $srcdir/posix-2.X > /dev/null 2>&1
++  diff -a posix-2.O $srcdir/posix-2.X > /dev/null 2>&1
+   case $? in
+     0) if test "$VERBOSE" ; then $echo "passed posix-2"; fi ;;
+     1) $echo "Test posix-2 failed: files posix-2.O and $srcdir/posix-2.X differ" 1>&2;
+        errors=`expr $errors + 1` ;;
+     2) $echo "Test posix-2 may have failed." 1>&2;
+-       $echo The command "cmp posix-2.O $srcdir/posix-2.X" failed. 1>&2 ;
++       $echo The command "diff -a posix-2.O $srcdir/posix-2.X" failed. 1>&2 ;
+        errors=`expr $errors + 1` ;;
+   esac
+ fi
+@@ -330,13 +330,13 @@
+   $echo "Test posix-3 failed: ../../src/head return code $code differs from expected value 0" 1>&2
+   errors=`expr $errors + 1`
+ else
+-  cmp posix-3.O $srcdir/posix-3.X > /dev/null 2>&1
++  diff -a posix-3.O $srcdir/posix-3.X > /dev/null 2>&1
+   case $? in
+     0) if test "$VERBOSE" ; then $echo "passed posix-3"; fi ;;
+     1) $echo "Test posix-3 failed: files posix-3.O and $srcdir/posix-3.X differ" 1>&2;
+        errors=`expr $errors + 1` ;;
+     2) $echo "Test posix-3 may have failed." 1>&2;
+-       $echo The command "cmp posix-3.O $srcdir/posix-3.X" failed. 1>&2 ;
++       $echo The command "diff -a posix-3.O $srcdir/posix-3.X" failed. 1>&2 ;
+        errors=`expr $errors + 1` ;;
+   esac
+ fi
+@@ -347,13 +347,13 @@
+   $echo "Test posix-4 failed: ../../src/head return code $code differs from expected value 0" 1>&2
+   errors=`expr $errors + 1`
+ else
+-  cmp posix-4.O $srcdir/in-1024 > /dev/null 2>&1
++  diff -a posix-4.O $srcdir/in-1024 > /dev/null 2>&1
+   case $? in
+     0) if test "$VERBOSE" ; then $echo "passed posix-4"; fi ;;
+     1) $echo "Test posix-4 failed: files posix-4.O and $srcdir/in-1024 differ" 1>&2;
+        errors=`expr $errors + 1` ;;
+     2) $echo "Test posix-4 may have failed." 1>&2;
+-       $echo The command "cmp posix-4.O $srcdir/in-1024" failed. 1>&2 ;
++       $echo The command "diff -a posix-4.O $srcdir/in-1024" failed. 1>&2 ;
+        errors=`expr $errors + 1` ;;
+   esac
+ fi
+@@ -364,13 +364,13 @@
+   $echo "Test posix-5 failed: ../../src/head return code $code differs from expected value 0" 1>&2
+   errors=`expr $errors + 1`
+ else
+-  cmp posix-5.O $srcdir/in-1024 > /dev/null 2>&1
++  diff -a posix-5.O $srcdir/in-1024 > /dev/null 2>&1
+   case $? in
+     0) if test "$VERBOSE" ; then $echo "passed posix-5"; fi ;;
+     1) $echo "Test posix-5 failed: files posix-5.O and $srcdir/in-1024 differ" 1>&2;
+        errors=`expr $errors + 1` ;;
+     2) $echo "Test posix-5 may have failed." 1>&2;
+-       $echo The command "cmp posix-5.O $srcdir/in-1024" failed. 1>&2 ;
++       $echo The command "diff -a posix-5.O $srcdir/in-1024" failed. 1>&2 ;
+        errors=`expr $errors + 1` ;;
+   esac
+ fi

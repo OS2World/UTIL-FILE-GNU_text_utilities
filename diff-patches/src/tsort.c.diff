@@ -1,0 +1,18 @@
+--- old/textutils-2.0/src/tsort.c	Tue May  4 14:30:28 1999
++++ gnu/textutils-2.0/src/tsort.c	Sun Nov 25 00:59:04 2001
+@@ -29,6 +29,7 @@
+ #include <assert.h>
+ #include <getopt.h>
+ 
++#include <sys/types.h>
+ #include "system.h"
+ #include "long-options.h"
+ #include "error.h"
+@@ -456,6 +457,7 @@
+ {
+   int opt;
+ 
++  initialize_main(&argc, &argv);
+   program_name = argv[0];
+   setlocale (LC_ALL, "");
+   bindtextdomain (PACKAGE, LOCALEDIR);

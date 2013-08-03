@@ -1,0 +1,26 @@
+--- old/textutils-2.0/src/sys2.h	Mon Jul 26 09:24:32 1999
++++ gnu/textutils-2.0/src/sys2.h	Sat Oct 20 18:04:14 2001
+@@ -83,11 +83,19 @@
+ #define ISDIGIT_LOCALE(c) (IN_CTYPE_DOMAIN (c) && isdigit (c))
+ 
+ #if STDC_HEADERS
+-# define TOLOWER(Ch) tolower (Ch)
+-# define TOUPPER(Ch) toupper (Ch)
++# ifndef TOLOWER
++#  define TOLOWER(Ch) tolower (Ch)
++# endif
++# ifndef TOUPPER
++#  define TOUPPER(Ch) toupper (Ch)
++# endif
+ #else
+-# define TOLOWER(Ch) (ISUPPER (Ch) ? tolower (Ch) : (Ch))
+-# define TOUPPER(Ch) (ISLOWER (Ch) ? toupper (Ch) : (Ch))
++# ifndef TOLOWER
++#  define TOLOWER(Ch) (ISUPPER (Ch) ? tolower (Ch) : (Ch))
++# endif
++# ifndef TOUPPER
++#  define TOUPPER(Ch) (ISLOWER (Ch) ? toupper (Ch) : (Ch))
++# endif
+ #endif
+ 
+ /* ISDIGIT differs from ISDIGIT_LOCALE, as follows:

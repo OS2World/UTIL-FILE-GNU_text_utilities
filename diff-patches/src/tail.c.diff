@@ -1,0 +1,10 @@
+--- old/textutils-2.0/src/tail.c	Thu Aug  5 14:38:02 1999
++++ gnu/textutils-2.0/src/tail.c	Sat Oct 20 22:20:32 2001
+@@ -1451,6 +1451,7 @@
+   struct File_spec *F;
+   int i;
+ 
++  initialize_main(&argc, &argv);
+   program_name = argv[0];
+   setlocale (LC_ALL, "");
+   bindtextdomain (PACKAGE, LOCALEDIR);

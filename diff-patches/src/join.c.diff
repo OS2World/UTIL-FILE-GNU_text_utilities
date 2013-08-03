@@ -1,0 +1,10 @@
+--- old/textutils-2.0/src/join.c	Sun Jul  4 10:38:02 1999
++++ gnu/textutils-2.0/src/join.c	Sat Oct 20 22:16:58 2001
+@@ -731,6 +731,7 @@
+   FILE *fp1, *fp2;
+   int optc, prev_optc = 0, nfiles;
+ 
++  initialize_main(&argc, &argv);
+   program_name = argv[0];
+   setlocale (LC_ALL, "");
+   bindtextdomain (PACKAGE, LOCALEDIR);

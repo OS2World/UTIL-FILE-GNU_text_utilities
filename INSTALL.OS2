@@ -1,0 +1,144 @@
+Installation instructions for text utilities 2.0 (OS/2)
+
+Make sure you have installed the software required to configure, compile
+and install GNU software packages (See README.OS2 section I. for details).
+Prepare your shell for the configuration process (See README.OS2 section
+II. for details).
+
+
+I. ***** SHORT INSTALLATION INSTRUCTIONS *****
+
+The following packages must have been installed before:
+
+- regex 0.12 or higher (libregex-0_12.zip)
+- gettext 0.10.39 or higher (libgettext-0_10_39.zip)
+
+----- developers only -----
+If you want to recreate your configuration files (for developers only)
+you must have installed autoconf 2.50 and automake 1.4p5.
+Enter the following:
+
+export EMXSHELL=ksh
+aclocal -I m4
+automake
+autoconf
+autoheader
+----- developers only -----
+
+
+If you want to install this software into subdirectories of x:/usr
+enter the following:
+
+
+a) If you choose large, statically linked, DOS/OS/2 combined executables:
+
+   - (optional, only if you want to restrict support to a few languages,
+     see README.OS2 for details)
+     export LINGUAS="en de fr"
+     This will install only "de" and "fr" ("en" is the default)
+
+   - CFLAGS="-O2 -s -Zmt -D__ST_MT_ERRNO__"
+     ./configure --prefix=x:/usr --without-included-gettext
+
+   - make
+
+   - (optional, only if you want to remove debug code from the executables:)
+     for i in *.exe; do strip -o $i.aout $i && emxbind -o $i $i.aout && rm $i.aout; done
+
+   - make install
+
+
+
+b) If you choose smaller, dynamically linked, compressed, OS/2 only executables:
+
+   - (optional, only if you want to install support for some languages
+     but not for all, see README.OS2 for details)
+     export LINGUAS="en de fr"
+     This will install only "de" and "fr" ("en" is the default).
+
+   - Enter the following lines:
+     CFLAGS="-Zomf -O2 -s -Zmt -D__ST_MT_ERRNO__"
+     LDFLAGS="-Zcrtdll -Zmt -s -Zlinker /exepack:2 -Zlinker /pm:vio"
+     RANLIB="echo"     
+     ./configure --prefix=x:/usr --without-included-regex --without-included-gettext
+
+     if you're using gcc/pgcc 2.95 or higher you may want to set also
+     LIBS="-lgcc"
+     Then your program will not require the compiler dependent library gcc????m.dll, 
+     but your executable may (or may not) increase in size.
+
+   - make AR=emxomfar
+
+   - make install
+
+
+   Now some executables have been installed into x:/usr/bin
+   and some other files into subdirectories of x:/usr
+   Add x:\usr\bin to your PATH
+   Add x:\usr\lib to your LIBPATH
+   Add x:/usr/include to your C_INCLUDE_PATH
+   Add x:/usr/lib to your LIBRARY_PATH
+   Add x:/usr/man to your MANPATH
+   Add x:/usr/info to your INFOPATH
+
+
+
+II. ***** INSTALLATION OF text utilities 2.0 FROM THE ORIGINAL GNU SOURCE: *****
+
+1. Download the text utilities package from ftp://ftp.gnu.org/gnu/textutil/.
+   Apply the patches from diff-patches/*.
+   Replace mkinstalldirs by an OS/2 compatible version.
+   Replace config.guess, config.sub by a newer version.
+   Remove m4/const.m4 and m4/largefile.m4 because they seem to be not necessary
+   with autoconf 2.50
+
+2. export EMXSHELL=ksh
+   aclocal -I m4
+   automake
+   autoconf
+   autoheader
+
+3. Proceed with the normal installation process in section I.
+
+
+
+III. Uninstallation
+
+1. Configure the package as normal if not already done.
+
+2. To remove all previous installed files, enter:
+
+   make uninstall
+
+
+
+IV. Special notes:
+
+1. Additionally to the original GNU package textutils-2_0_tar.gz this
+   special OS/2 patch contains the following files:
+
+   INSTALL.OS2
+   README.OS2
+   diff-patches/*
+
+2. Some paths may be linked into the executables. If you move some of the
+   files from this package to another location you may have to reinstall
+   the whole package.
+
+3. If you want to run the internal tests:
+   export VERBOSE=yes
+   make check CMP="diff -a"
+
+   To be able to start all tests you need perl 5.005 or higher.
+   At most three of the 'pr' tests should fail.
+
+4. Note: in contrast to older ports 'tr' uses binary I/O
+
+5. Note: This packages contains basically no patch from older ports because
+         they didn't seem to be necessary any more due to basic DOS/Windows
+         support in this package.
+
+--
+
+Maintainer: Andreas Buening, <andreas.buening@nexgo.de>
+

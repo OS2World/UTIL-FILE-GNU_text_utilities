@@ -1,0 +1,10 @@
+--- old/textutils-2.0/src/uniq.c	Sun Jul  4 10:02:54 1999
++++ gnu/textutils-2.0/src/uniq.c	Sat Oct 20 22:21:34 2001
+@@ -284,6 +284,7 @@
+   int optc;
+   char *infile = "-", *outfile = "-";
+ 
++  initialize_main(&argc, &argv);
+   program_name = argv[0];
+   setlocale (LC_ALL, "");
+   bindtextdomain (PACKAGE, LOCALEDIR);

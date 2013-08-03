@@ -1,0 +1,10 @@
+--- old/textutils-2.0/src/split.c	Sat Apr  3 19:44:10 1999
++++ gnu/textutils-2.0/src/split.c	Sat Oct 20 22:19:36 2001
+@@ -343,6 +343,7 @@
+   int c;
+   int digits_optind = 0;
+ 
++  initialize_main(&argc, &argv);
+   program_name = argv[0];
+   setlocale (LC_ALL, "");
+   bindtextdomain (PACKAGE, LOCALEDIR);

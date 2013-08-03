@@ -1,0 +1,16 @@
+--- old/textutils-2.0/src/fmt.c	Sat Apr  3 17:25:00 1999
++++ gnu/textutils-2.0/src/fmt.c	Sat Oct 20 23:38:44 2001
+@@ -307,10 +307,12 @@
+ };
+ 
+ int
+-main (register int argc, register char **argv)
++/* main (register int argc, register char **argv) */
++main (int argc, char **argv)
+ {
+   int optchar;
+ 
++  initialize_main(&argc, &argv);
+   program_name = argv[0];
+   setlocale (LC_ALL, "");
+   bindtextdomain (PACKAGE, LOCALEDIR);

@@ -1,0 +1,10 @@
+--- old/textutils-2.0/src/sum.c	Sat Apr  3 19:44:38 1999
++++ gnu/textutils-2.0/src/sum.c	Sun Nov 25 01:03:16 2001
+@@ -208,6 +208,7 @@
+   int files_given;
+   int (*sum_func) () = bsd_sum_file;
+ 
++  initialize_main(&argc, &argv);
+   program_name = argv[0];
+   setlocale (LC_ALL, "");
+   bindtextdomain (PACKAGE, LOCALEDIR);

@@ -1,0 +1,10 @@
+--- old/textutils-2.0/src/pr.c	Sun Jul 25 09:19:16 1999
++++ gnu/textutils-2.0/src/pr.c	Sat Oct 20 22:18:22 2001
+@@ -840,6 +840,7 @@
+   int old_s = FALSE;
+   char **file_names;
+ 
++  initialize_main(&argc, &argv);
+   program_name = argv[0];
+   setlocale (LC_ALL, "");
+   bindtextdomain (PACKAGE, LOCALEDIR);

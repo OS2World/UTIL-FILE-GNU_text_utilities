@@ -1,0 +1,24 @@
+--- old/textutils-2.0/m4/lstat.m4	Sun Feb  7 14:16:28 1999
++++ gnu/textutils-2.0/m4/lstat.m4	Sat Dec  1 18:23:08 2001
+@@ -11,7 +11,11 @@
+ 
+ AC_DEFUN(jm_FUNC_LSTAT,
+ [
+- AC_CACHE_CHECK([whether lstat accepts an empty string],
++ dnl if lstat() does not exist replace it by stat()
++ dnl otherwise test whether lchown need to be replaced
++
++ AC_CHECK_FUNC(lstat,
++ [AC_CACHE_CHECK([whether lstat accepts an empty string],
+   jm_cv_func_lstat_empty_string_bug,
+   [AC_TRY_RUN([
+ #   include <sys/types.h>
+@@ -37,4 +41,8 @@
+    file name argument.  The lstat from SunOS4.1.4 and the Hurd as of 1998-11-01)
+    do this. ])
+   fi
++  ],
++  [AC_DEFINE([lstat], [stat],
++   [Define to 'stat' if you do no have the 'lstat' function.])
++ ]) dnl end AC_CHECK_FUNC(lstat, ...)
+ ])

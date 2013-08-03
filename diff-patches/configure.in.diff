@@ -1,0 +1,12 @@
+--- old/textutils-2.0/configure.in	Fri Aug  6 19:22:10 1999
++++ gnu/textutils-2.0/configure.in	Sat Oct 20 17:35:24 2001
+@@ -23,6 +23,9 @@
+ AC_AIX
+ AC_MINIX
+ 
++AC_EXEEXT
++AC_OBJEXT
++
+ dnl This test must come as early as possible after the compiler configuration
+ dnl tests, because the choice of the file model can (in principle) affect
+ dnl whether functions and headers are available, whether they work, etc.

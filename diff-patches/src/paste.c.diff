@@ -1,0 +1,10 @@
+--- old/textutils-2.0/src/paste.c	Sat Apr  3 19:42:46 1999
++++ gnu/textutils-2.0/src/paste.c	Sat Oct 20 22:18:10 2001
+@@ -432,6 +432,7 @@
+   int optc, exit_status;
+   char default_delims[2], zero_delims[3];
+ 
++  initialize_main(&argc, &argv);
+   program_name = argv[0];
+   setlocale (LC_ALL, "");
+   bindtextdomain (PACKAGE, LOCALEDIR);

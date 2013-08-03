@@ -1,0 +1,17 @@
+--- old/textutils-2.0/m4/lchown.m4	Tue May 19 16:02:58 1998
++++ gnu/textutils-2.0/m4/lchown.m4	Sat Dec  1 17:57:56 2001
+@@ -6,5 +6,13 @@
+ AC_DEFUN(jm_FUNC_LCHOWN,
+ [
+   AC_REQUIRE([AC_TYPE_UID_T])
+-  AC_REPLACE_FUNCS(lchown)
++
++  dnl if lchown() does not exist replace it by chown()
++  dnl otherwise test whether lchown need to be replaced
++
++  AC_CHECK_FUNC([lchown],
++   AC_REPLACE_FUNCS(lchown),
++   [AC_DEFINE([lchown], [chown], 
++    [Define to 'chown' if you do no have the 'lchown' function.])
++  ])
+ ])

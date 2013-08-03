@@ -1,0 +1,10 @@
+--- old/textutils-2.0/src/unexpand.c	Sat Apr  3 19:46:50 1999
++++ gnu/textutils-2.0/src/unexpand.c	Sat Oct 20 22:21:24 2001
+@@ -385,6 +385,7 @@
+   int tabval = -1;		/* Value of tabstop being read, or -1. */
+   int c;			/* Option character. */
+ 
++  initialize_main(&argc, &argv);
+   program_name = argv[0];
+   setlocale (LC_ALL, "");
+   bindtextdomain (PACKAGE, LOCALEDIR);

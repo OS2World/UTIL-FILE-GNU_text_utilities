@@ -1,0 +1,10 @@
+--- old/textutils-2.0/src/sort.c	Thu Aug  5 07:42:48 1999
++++ gnu/textutils-2.0/src/sort.c	Sat Oct 20 22:19:16 2001
+@@ -1903,6 +1903,7 @@
+   struct sigaction oldact, newact;
+ #endif				/* SA_INTERRUPT */
+ 
++  initialize_main(&argc, &argv);
+   program_name = argv[0];
+   setlocale (LC_ALL, "");
+   bindtextdomain (PACKAGE, LOCALEDIR);

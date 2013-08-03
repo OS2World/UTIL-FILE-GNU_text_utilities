@@ -1,0 +1,11 @@
+--- old/textutils-2.0/m4/afs.m4	Fri Jan 29 05:00:34 1999
++++ gnu/textutils-2.0/m4/afs.m4	Sat Oct 20 14:24:34 2001
+@@ -1,7 +1,7 @@
+ #serial 1
+ 
+ AC_DEFUN(jm_AFS,
+-  AC_CHECKING(for AFS)
++  AC_MSG_NOTICE(for AFS)
+   test -d /afs \
+     && AC_DEFINE(AFS, 1, [Define if you have the Andrew File System.])
+ )

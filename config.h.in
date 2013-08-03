@@ -1,0 +1,628 @@
+/* config.h.in.  Generated automatically from configure.in by autoheader.  */
+/* Definitions for GNU textutils, processed by autoheader.
+   Copyright (C) 1995, 1997, 1998, 1999 Free Software Foundation, Inc.
+*/
+
+/* This is always defined.  It enables GNU extensions on systems that
+   have them.  */
+#ifndef _GNU_SOURCE
+# undef _GNU_SOURCE
+#endif
+
+#include<stdlib.h>
+
+#include<errno.h>
+
+/* Define if you have the Andrew File System. */
+#undef AFS
+
+/* Define to the function xargmatch calls on failures. */
+#undef ARGMATCH_DIE
+
+/* Define to the declaration of the xargmatch failure function. */
+#undef ARGMATCH_DIE_DECL
+
+/* Define to one of `_getb67', `GETB67', `getb67' for Cray-2 and Cray-YMP
+   systems. This function is required for `alloca.c' support on those systems.
+   */
+#undef CRAY_STACKSEG_END
+
+/* Define if using `alloca.c'. */
+#undef C_ALLOCA
+
+/* Define if there is a member named d_ino in the struct describing directory
+   headers. */
+#undef D_INO_IN_DIRENT
+
+/* Define if there is a member named d_type in the struct describing directory
+   headers. */
+#undef D_TYPE_IN_DIRENT
+
+/* EMX needs _chdir2() */
+#undef EMX_REPLACE_CHDIR
+
+/* EMX needs _getcwd2() */
+#undef EMX_REPLACE_GETCWD
+
+/* Define to 1 if NLS is requested. */
+#undef ENABLE_NLS
+
+/* Define to the type of elements in the array set by `getgroups'. Usually
+   this is either `int' or `gid_t'. */
+#undef GETGROUPS_T
+
+/* The concatenation of the strings `GNU ', and PACKAGE. */
+#undef GNU_PACKAGE
+
+/* Define if you have the `alarm' function. */
+#undef HAVE_ALARM
+
+/* Define if you have `alloca', as a function or macro. */
+#undef HAVE_ALLOCA
+
+/* Define if you have <alloca.h> and it should be used (not on Ultrix). */
+#undef HAVE_ALLOCA_H
+
+/* Define if you have the <argz.h> header file. */
+#undef HAVE_ARGZ_H
+
+/* Define if you have the `bcopy' function. */
+#undef HAVE_BCOPY
+
+/* Define if you have the `btowc' function. */
+#undef HAVE_BTOWC
+
+/* Define if you have the `bzero' function. */
+#undef HAVE_BZERO
+
+/* Define as 1 if you have catgets and don't want to use GNU gettext. */
+#undef HAVE_CATGETS
+
+/* Define if you have the `chdir' function. */
+#undef HAVE_CHDIR
+
+/* Define if you have the `chown' function. */
+#undef HAVE_CHOWN
+
+/* Define if you have the `dcgettext' function. */
+#undef HAVE_DCGETTEXT
+
+/* Define if this function is declared. */
+#undef HAVE_DECL_FREE
+
+/* Define if this function is declared. */
+#undef HAVE_DECL_LSEEK
+
+/* Define if this function is declared. */
+#undef HAVE_DECL_MALLOC
+
+/* Define if this function is declared. */
+#undef HAVE_DECL_MEMCHR
+
+/* Define if this function is declared. */
+#undef HAVE_DECL_REALLOC
+
+/* Define if this function is declared. */
+#undef HAVE_DECL_STPCPY
+
+/* Define if this function is declared. */
+#undef HAVE_DECL_STRSTR
+
+/* Define if you have the <dirent.h> header file, and it defines `DIR'. */
+#undef HAVE_DIRENT_H
+
+/* Define if the malloc check has been performed. */
+#undef HAVE_DONE_WORKING_MALLOC_CHECK
+
+/* Define if the realloc check has been performed. */
+#undef HAVE_DONE_WORKING_REALLOC_CHECK
+
+/* Define if you don't have `vprintf' but do have `_doprnt.' */
+#undef HAVE_DOPRNT
+
+/* Define if you have the `dup2' function. */
+#undef HAVE_DUP2
+
+/* Define if you have the `fchown' function. */
+#undef HAVE_FCHOWN
+
+/* Define if you have the <fcntl.h> header file. */
+#undef HAVE_FCNTL_H
+
+/* Define if you have the <float.h> header file. */
+#undef HAVE_FLOAT_H
+
+/* Define if your system has a working `fnmatch' function. */
+#undef HAVE_FNMATCH
+
+/* Define if you have the `fseeko' function. */
+#undef HAVE_FSEEKO
+
+/* Define if you have the `getcwd' function. */
+#undef HAVE_GETCWD
+
+/* Define if you have the `getdelim' function. */
+#undef HAVE_GETDELIM
+
+/* Define if you have the `getpagesize' function. */
+#undef HAVE_GETPAGESIZE
+
+/* Define to 1 if you have gettext and don't want to use GNU gettext. */
+#undef HAVE_GETTEXT
+
+/* Define if <inttypes.h> exists, doesn't clash with <sys/types.h>, and
+   declares uintmax_t. */
+#undef HAVE_INTTYPES_H
+
+/* Define if you have the `isascii' function. */
+#undef HAVE_ISASCII
+
+/* Define if you have the <langinfo.h> header file. */
+#undef HAVE_LANGINFO_H
+
+/* Define if you have the `lchown' function. */
+#undef HAVE_LCHOWN
+
+/* Define if your locale.h file contains LC_MESSAGES. */
+#undef HAVE_LC_MESSAGES
+
+/* Define if you have the `i' library (-li). */
+#undef HAVE_LIBI
+
+/* Define if you have the `intl' library (-lintl). */
+#undef HAVE_LIBINTL
+
+/* Define if you have the <libintl.h> header file. */
+#undef HAVE_LIBINTL_H
+
+/* Define if you have the <limits.h> header file. */
+#undef HAVE_LIMITS_H
+
+/* Define if you have the `link' function. */
+#undef HAVE_LINK
+
+/* Define if you have the <locale.h> header file. */
+#undef HAVE_LOCALE_H
+
+/* Define if you have the `localtime_r' function. */
+#undef HAVE_LOCALTIME_R
+
+/* Define if the `long double' type works. */
+#undef HAVE_LONG_DOUBLE
+
+/* Define if you have the `lstat' function. */
+#undef HAVE_LSTAT
+
+/* Define if lstat has the bug that it succeeds when given the zero-length
+   file name argument. The lstat from SunOS4.1.4 and the Hurd as of
+   1998-11-01) do this. */
+#undef HAVE_LSTAT_EMPTY_STRING_BUG
+
+/* Define if you have the <malloc.h> header file. */
+#undef HAVE_MALLOC_H
+
+/* Define if you have the `memchr' function. */
+#undef HAVE_MEMCHR
+
+/* Define if you have the `memcpy' function. */
+#undef HAVE_MEMCPY
+
+/* Define if you have the `memmove' function. */
+#undef HAVE_MEMMOVE
+
+/* Define if you have the <memory.h> header file. */
+#undef HAVE_MEMORY_H
+
+/* Define if you have the `mempcpy' function. */
+#undef HAVE_MEMPCPY
+
+/* Define if you have the `memset' function. */
+#undef HAVE_MEMSET
+
+/* Define if you have the `mkfifo' function. */
+#undef HAVE_MKFIFO
+
+/* Define if you have the `mknod' function. */
+#undef HAVE_MKNOD
+
+/* Define if you have a working `mmap' system call. */
+#undef HAVE_MMAP
+
+/* Define if you have the `munmap' function. */
+#undef HAVE_MUNMAP
+
+/* Define if you have the <ndir.h> header file, and it defines `DIR'. */
+#undef HAVE_NDIR_H
+
+/* Define if you have the `nl_langinfo' function. */
+#undef HAVE_NL_LANGINFO
+
+/* Define if you have the <nl_types.h> header file. */
+#undef HAVE_NL_TYPES_H
+
+/* Define if you have the <os2.h> header file. */
+#undef HAVE_OS2_H
+
+/* Define if you have the `pow' function. */
+#undef HAVE_POW
+
+/* Define if you have the `putenv' function. */
+#undef HAVE_PUTENV
+
+/* Define if you have the `readlink' function. */
+#undef HAVE_READLINK
+
+/* Define if you have the `setenv' function. */
+#undef HAVE_SETENV
+
+/* Define if you have the `setlocale' function. */
+#undef HAVE_SETLOCALE
+
+/* Define if you have the `stat' function. */
+#undef HAVE_STAT
+
+/* Define if stat has the bug that it succeeds when given the zero-length file
+   name argument. The stat from SunOS4.1.4 and the Hurd as of 1998-11-01) do
+   this. */
+#undef HAVE_STAT_EMPTY_STRING_BUG
+
+/* Define if you have the <stdlib.h> header file. */
+#undef HAVE_STDLIB_H
+
+/* Define to 1 if you have the stpcpy function. */
+#undef HAVE_STPCPY
+
+/* Define if you have the `strcasecmp' function. */
+#undef HAVE_STRCASECMP
+
+/* Define if you have the `strchr' function. */
+#undef HAVE_STRCHR
+
+/* Define if you have the `strdup' function. */
+#undef HAVE_STRDUP
+
+/* Define if you have the `strerror' function. */
+#undef HAVE_STRERROR
+
+/* Define if you have the `strerror_r' function. */
+#undef HAVE_STRERROR_R
+
+/* Define if you have the `strftime' function. */
+#undef HAVE_STRFTIME
+
+/* Define if you have the `stricmp' function. */
+#undef HAVE_STRICMP
+
+/* Define if you have the <strings.h> header file. */
+#undef HAVE_STRINGS_H
+
+/* Define if you have the <string.h> header file. */
+#undef HAVE_STRING_H
+
+/* Define if you have the `strncasecmp' function. */
+#undef HAVE_STRNCASECMP
+
+/* Define if you have the `strnicmp' function. */
+#undef HAVE_STRNICMP
+
+/* Define if you have the `strpbrk' function. */
+#undef HAVE_STRPBRK
+
+/* Define if you have the `strrchr' function. */
+#undef HAVE_STRRCHR
+
+/* Define if you have the `strtol' function. */
+#undef HAVE_STRTOL
+
+/* Define if you have the `strtoul' function. */
+#undef HAVE_STRTOUL
+
+/* Define if you have the `strtoull' function. */
+#undef HAVE_STRTOULL
+
+/* Define if you have the `strtoumax' function. */
+#undef HAVE_STRTOUMAX
+
+/* Define if `st_blksize' is member of `struct stat'. */
+#undef HAVE_STRUCT_STAT_ST_BLKSIZE
+
+/* Define if struct utimbuf is declared -- usually in <utime.h>. Some systems
+   have utime.h but don't declare the struct anywhere. */
+#undef HAVE_STRUCT_UTIMBUF
+
+/* Define if your `struct stat' has `st_blksize'. Deprecated, use
+   `HAVE_STRUCT_STAT_ST_BLKSIZE' instead. */
+#undef HAVE_ST_BLKSIZE
+
+/* Define if you have the `symlink' function. */
+#undef HAVE_SYMLINK
+
+/* Define if you have the `sync' function. */
+#undef HAVE_SYNC
+
+/* Define if you have the <sys/dir.h> header file, and it defines `DIR'. */
+#undef HAVE_SYS_DIR_H
+
+/* Define if you have the <sys/ndir.h> header file, and it defines `DIR'. */
+#undef HAVE_SYS_NDIR_H
+
+/* Define if you have the <sys/nls.h> header file. */
+#undef HAVE_SYS_NLS_H
+
+/* Define if you have the <sys/param.h> header file. */
+#undef HAVE_SYS_PARAM_H
+
+/* Define if you have the <sys/time.h> header file. */
+#undef HAVE_SYS_TIME_H
+
+/* Define if you have the <unistd.h> header file. */
+#undef HAVE_UNISTD_H
+
+/* Define if you have the unsigned long long type. */
+#undef HAVE_UNSIGNED_LONG_LONG
+
+/* Define if you have the <utime.h> header file. */
+#undef HAVE_UTIME_H
+
+/* Define if you have the <values.h> header file. */
+#undef HAVE_VALUES_H
+
+/* Define if you have the `vprintf' function. */
+#undef HAVE_VPRINTF
+
+/* Define if you have the <wchar.h> header file. */
+#undef HAVE_WCHAR_H
+
+/* Define if you have the <wctype.h> header file. */
+#undef HAVE_WCTYPE_H
+
+/* Define if readdir is found to work properly in some unusual cases. */
+#undef HAVE_WORKING_READDIR
+
+/* Define if you have the `_chdir2' function. */
+#undef HAVE__CHDIR2
+
+/* Define if you have the `_getcwd2' function. */
+#undef HAVE__GETCWD2
+
+/* Define if you have the `_nls_init' function. */
+#undef HAVE__NLS_INIT
+
+/* Define if you have the `_response' function. */
+#undef HAVE__RESPONSE
+
+/* Define if you have the `_wildcard' function. */
+#undef HAVE__WILDCARD
+
+/* Define if you have the `__argz_count' function. */
+#undef HAVE___ARGZ_COUNT
+
+/* Define if you have the `__argz_next' function. */
+#undef HAVE___ARGZ_NEXT
+
+/* Define if you have the `__argz_stringify' function. */
+#undef HAVE___ARGZ_STRINGIFY
+
+/* Define to 1 if assertions should be disabled. */
+#undef NDEBUG
+
+/* Name of package */
+#undef PACKAGE
+
+/* Define if compiler has function prototypes */
+#undef PROTOTYPES
+
+/* Define as the return type of signal handlers (`int' or `void'). */
+#undef RETSIGTYPE
+
+/* Define if the `setvbuf' function takes the buffering type as its second
+   argument and the buffer pointer as the third, as on System V before release
+   3. */
+#undef SETVBUF_REVERSED
+
+/* If using the C implementation of alloca, define if you know the
+   direction of stack growth for your system; otherwise it will be
+   automatically deduced at run-time.
+        STACK_DIRECTION > 0 => grows toward higher addresses
+        STACK_DIRECTION < 0 => grows toward lower addresses
+        STACK_DIRECTION = 0 => direction of growth unknown */
+#undef STACK_DIRECTION
+
+/* Define if the `S_IS*' macros in <sys/stat.h> do not work properly. */
+#undef STAT_MACROS_BROKEN
+
+/* Define if you have the ANSI C header files. */
+#undef STDC_HEADERS
+
+/* Define if you can safely include both <sys/time.h> and <time.h>. */
+#undef TIME_WITH_SYS_TIME
+
+/* Version number of package */
+#undef VERSION
+
+/* Define if your processor stores words with the most significant byte first
+   (like Motorola and SPARC, unlike Intel and VAX). */
+#undef WORDS_BIGENDIAN
+
+/* Define if on AIX 3.
+   System headers sometimes define this.
+   We just want to avoid a redefinition error message.  */
+#ifndef _ALL_SOURCE
+# undef _ALL_SOURCE
+#endif
+
+/* Number of bits in a file offset, on hosts where this is settable. */
+#undef _FILE_OFFSET_BITS
+
+#if HAVE__RESPONSE && defined __EMX__
+# define _EMX_RESPONSE(a, b) _response(a, b)
+#else
+# define _EMX_RESPONSE(a, b)
+#endif
+
+#if HAVE__WILDCARD && defined __EMX__
+# define _EMX_WILDCARD(a, b) _wildcard(a, b)
+#else
+# define _EMX_WILDCARD(a, b)
+#endif
+
+#if HAVE_SYS_NLS_H && HAVE__NLS_INIT
+# include<sys/nls.h>
+# define TOUPPER(x) _nls_toupper(x)
+# define TOLOWER(x) _nls_tolower(x)
+#endif
+
+#if (HAVE__RESPONSE || HAVE__WILDCARD) && !defined initialize_main
+# define initialize_main(pargc, pargv) { \
+_EMX_RESPONSE(pargc, pargv); _EMX_WILDCARD(pargc, pargv); }
+#endif
+
+/* Define for large files, on AIX-style hosts. */
+#undef _LARGE_FILES
+
+/* Define if on MINIX. */
+#undef _MINIX
+
+/* Define if the system does not provide POSIX.1 features except with this
+   defined. */
+#undef _POSIX_1_SOURCE
+
+/* Define if you need to in order for `stat' and other things to work. */
+#undef _POSIX_SOURCE
+
+/* Replace chdir() by _chdir2() if necessary (EMX only) */
+#if defined EMX_REPLACE_CHDIR && !defined chdir
+#define chdir replace_chdir
+static inline int replace_chdir(const char *name) { return _chdir2(name); }
+#endif
+
+/* Define to rpl_chown if the replacement function should be used. */
+#undef chown
+
+/* Define to empty if `const' does not conform to ANSI C. */
+#undef const
+
+/* Define to rpl_fnmatch if the replacement function should be used. */
+#undef fnmatch
+
+/* Replace getcwd() by _getcwd2() if necessary (EMX only) */
+#if defined EMX_REPLACE_GETCWD && !defined getcwd
+#define getcwd replace_getcwd
+static inline char* replace_getcwd(char *buffer, size_t size) { return _getcwd2(buffer, size); }
+#endif
+
+/* Define to `int' if <sys/types.h> doesn't define. */
+#undef gid_t
+
+/* Define as `__inline' if that's what the C compiler calls it, or to nothing
+   if it is not supported. */
+#undef inline
+
+/* Define to `unsigned long' if certain system header files doesn't define
+   it. */
+#undef ino_t
+
+/* Define to 'stat' if you do no have the 'lstat' function. */
+#undef lstat
+
+/* Define to rpl_malloc if the replacement function should be used. */
+#undef malloc
+
+/* Define to rpl_memcmp if the replacement function should be used. */
+#undef memcmp
+
+/* Define to rpl_mktime if the replacement function should be used. */
+#undef mktime
+
+/* Define to `int' if certain system header files doesn't define it. */
+#undef mode_t
+
+/* Define to `long' if certain system header files doesn't define it. */
+#undef off_t
+
+/* Define to `int' if certain system header files doesn't define it. */
+#undef pid_t
+
+/* Define to rpl_realloc if the replacement function should be used. */
+#undef realloc
+
+/* Define to `unsigned' if certain system header files doesn't define it. */
+#undef size_t
+
+/* Define to `int' if certain system header files doesn't define it. */
+#undef ssize_t
+
+/* Define to `int' if <sys/types.h> doesn't define. */
+#undef uid_t
+
+/* Define to `unsigned long' or `unsigned long long' if <inttypes.h> doesn't
+   define. */
+#undef uintmax_t
+
+/* If libc does not support chown(), replace it by a dummy function */
+#if !HAVE_CHOWN && !defined chown
+static inline int replace_chown(const char *file, unsigned uid, unsigned gid) { errno = EPERM; return -1; }
+#define chown replace_chown
+#endif
+
+/* If libc does not support fchown(), replace it by a dummy function */
+#if !HAVE_FCHOWN && !defined fchown
+static inline int replace_fchown(int fd, unsigned owner, unsigned group) { errno = EPERM; return -1; }
+#define fchown(x,y,z) replace_fchown(x,y,z)
+#endif
+
+/* If libc does not support lchown(), replace it by chown */
+#if !HAVE_LCHOWN && !defined lchown
+static inline int replace_lchown(const char *file, unsigned uid, unsigned gid) { errno = EPERM; return -1; }
+#define lchown replace_lchown
+#endif
+
+/* If libc does not support link(), replace it by a dummy function */
+#if !HAVE_LINK && !defined link
+static inline int replace_link(const char *oldpath, const char *newpath) { errno = EPERM; return -1; }
+#define link replace_link
+#endif
+
+/* If libc does not support lstat(), replace it by stat() (EMX only) */
+#if !HAVE_LSTAT && HAVE_STAT && !defined lstat
+# define lstat stat
+#endif
+
+/* If libc does not support mkfifo(), replace it by a dummy function */
+#if !HAVE_MKFIFO && !defined mkfifo
+static inline int replace_mkfifo(const char *pathname, unsigned mode) { errno = EPERM; return -1; }
+#define mkfifo(x,y) replace_mkfifo(x,y)
+#endif
+
+/* If libc does not support mknod(), replace it by a dummy function */
+#if !HAVE_MKNOD && !defined mknod
+static inline int replace_mknod(const char *pathname, unsigned mode, unsigned dev) { errno = EPERM; return -1; }
+#define mknod(x,y,z) replace_mknod(x,y,z)
+#endif
+
+/* If libc does not support readlink(), replace it by a dummy function */
+#if !HAVE_READLINK && !defined readlink
+static inline int replace_readlink(const char *path, char *buf, size_t bufsize) { errno = EPERM; return -1; }
+#define readlink replace_readlink
+#endif
+
+/* Replace strcasecmp() by stricmp() if necessary (EMX only) */
+#if !HAVE_STRCASECMP && HAVE_STRICMP && !defined strcasecmp
+# define strcasecmp(x,y) stricmp(x,y)
+#endif
+
+/* Replace strncasecmp() by strnicmp() if necessary (EMX only) */
+#if !HAVE_STRNCASECMP && HAVE_STRNICMP && !defined strncasecmp
+# define strncasecmp strnicmp
+#endif
+
+/* If libc does not support symlink(), replace it by a dummy function */
+#if !HAVE_SYMLINK && !defined symlink
+static inline int replace_symlink(const char *oldpath, const char *newpath) { errno = EPERM; return -1; }
+#define symlink replace_symlink
+#endif
+
+/* If libc does not support sync(), replace it by an empty macro */
+#if !HAVE_SYNC && !defined sync
+#define sync() {}
+#endif

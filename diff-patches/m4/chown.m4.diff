@@ -1,0 +1,26 @@
+--- old/textutils-2.0/m4/chown.m4	Sun Feb  7 14:16:28 1999
++++ gnu/textutils-2.0/m4/chown.m4	Sat Dec  1 21:41:50 2001
+@@ -9,7 +9,9 @@
+ [AC_REQUIRE([AC_TYPE_UID_T])dnl
+  test -z "$ac_cv_header_unistd_h" \
+    && AC_CHECK_HEADERS(unistd.h)
+- AC_CACHE_CHECK([for working chown], jm_cv_func_working_chown,
++ dnl if there is no chown(), there can be no working replacement
++ AC_CHECK_FUNC(chown,
++ [AC_CACHE_CHECK([for working chown], jm_cv_func_working_chown,
+   [AC_TRY_RUN([
+ #   include <sys/types.h>
+ #   include <sys/stat.h>
+@@ -47,4 +49,12 @@
+     AC_DEFINE_UNQUOTED(chown, rpl_chown,
+       [Define to rpl_chown if the replacement function should be used.])
+   fi
++  ]) dnl end AC_CHECK_FUNC(chown, ...)
++
++AH_VERBATIM([z_EMX_REPLACE_CHOWN],
++[/* If libc does not support chown(), replace it by a dummy function */
++#if !HAVE_CHOWN && !defined chown
++static inline int replace_chown(const char *file, unsigned uid, unsigned gid) { errno = EPERM; return -1; }
++#define chown replace_chown
++#endif])
+ ])

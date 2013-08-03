@@ -1,0 +1,10 @@
+--- old/textutils-2.0/src/comm.c	Sun Jul  4 10:14:52 1999
++++ gnu/textutils-2.0/src/comm.c	Sat Oct 20 22:14:08 2001
+@@ -228,6 +228,7 @@
+ {
+   int c;
+ 
++  initialize_main(&argc, &argv);
+   program_name = argv[0];
+   setlocale (LC_ALL, "");
+   bindtextdomain (PACKAGE, LOCALEDIR);

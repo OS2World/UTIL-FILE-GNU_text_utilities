@@ -1,0 +1,10 @@
+--- old/textutils-2.0/src/cut.c	Sat Apr  3 17:23:54 1999
++++ gnu/textutils-2.0/src/cut.c	Sat Oct 20 23:49:02 2001
+@@ -690,6 +690,7 @@
+   int optc, exit_status = 0;
+   int delim_specified = 0;
+ 
++  initialize_main(&argc, &argv);
+   program_name = argv[0];
+   setlocale (LC_ALL, "");
+   bindtextdomain (PACKAGE, LOCALEDIR);

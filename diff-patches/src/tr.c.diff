@@ -1,0 +1,18 @@
+--- old/textutils-2.0/src/tr.c	Sat Apr  3 19:46:18 1999
++++ gnu/textutils-2.0/src/tr.c	Sat Dec  1 17:31:56 2001
+@@ -1799,6 +1799,7 @@
+   struct Spec_list *s1 = &buf1;
+   struct Spec_list *s2 = &buf2;
+ 
++  initialize_main(&argc, &argv);
+   program_name = argv[0];
+   setlocale (LC_ALL, "");
+   bindtextdomain (PACKAGE, LOCALEDIR);
+@@ -1898,7 +1899,6 @@
+      non-printable characters, or characters which are stripped away
+      by text-mode reads (like CR and ^Z).  */
+   SET_BINARY2 (STDIN_FILENO, STDOUT_FILENO);
+-
+   if (squeeze_repeats && non_option_args == 1)
+     {
+       set_initialize (s1, complement, in_squeeze_set);

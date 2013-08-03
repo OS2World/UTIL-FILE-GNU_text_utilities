@@ -1,0 +1,10 @@
+--- old/textutils-2.0/src/head.c	Thu Apr 22 05:25:02 1999
++++ gnu/textutils-2.0/src/head.c	Sat Oct 20 22:16:40 2001
+@@ -258,6 +258,7 @@
+      Otherwise, interpret it as the number of bytes.  */
+   int count_lines = 1;
+ 
++  initialize_main(&argc, &argv);
+   program_name = argv[0];
+   setlocale (LC_ALL, "");
+   bindtextdomain (PACKAGE, LOCALEDIR);

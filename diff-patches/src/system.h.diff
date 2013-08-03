@@ -1,0 +1,39 @@
+--- old/textutils-2.0/src/system.h	Sat May  8 23:25:12 1999
++++ gnu/textutils-2.0/src/system.h	Sat Oct 20 22:11:54 2001
+@@ -81,7 +81,7 @@
+ # define S_IXUGO (S_IXUSR | S_IXGRP | S_IXOTH)
+ #endif
+ 
+-#if !defined(HAVE_MKFIFO)
++#if !defined(HAVE_MKFIFO) && !defined(mkfifo)
+ # define mkfifo(path, mode) (mknod ((path), (mode) | S_IFIFO, 0))
+ #endif
+ 
+@@ -175,10 +175,10 @@
+ # define O_TEXT _O_TEXT
+ #endif
+ #if O_BINARY
+-# ifndef __DJGPP__
++# if !defined __DJGPP__ && !defined __EMX__
+ #  define setmode _setmode
+ #  define fileno(_fp) _fileno (_fp)
+-# endif /* not DJGPP */
++# endif /* not DJGPP && not __EMX__ */
+ # define SET_BINARY(_f) do {if (!isatty(_f)) setmode (_f, O_BINARY);} while (0)
+ # define SET_BINARY2(_f1, _f2)		\
+   do {					\
+@@ -241,5 +241,14 @@
+ # define ST_BLKSIZE(statbuf) ((statbuf).st_blksize > 0 \
+ 			       ? (statbuf).st_blksize : DEV_BSIZE)
+ #endif /* HAVE_ST_BLKSIZE */
++
++#ifndef initialize_main
++# ifdef __EMX__
++#  define initialize_main(argcp, argvp) \
++  { _response(argcp, argvp); _wildcard(argcp, argvp); }
++# else /* NOT __EMX__ */
++#  define initialize_main(argcp, argvp)
++# endif
++#endif
+ 
+ #include "sys2.h"

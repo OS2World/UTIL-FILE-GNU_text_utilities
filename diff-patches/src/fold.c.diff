@@ -1,0 +1,10 @@
+--- old/textutils-2.0/src/fold.c	Sat Apr  3 17:25:40 1999
++++ gnu/textutils-2.0/src/fold.c	Sat Oct 20 22:16:28 2001
+@@ -237,6 +237,7 @@
+   int optc;
+   int errs = 0;
+ 
++  initialize_main(&argc, &argv);
+   program_name = argv[0];
+   setlocale (LC_ALL, "");
+   bindtextdomain (PACKAGE, LOCALEDIR);

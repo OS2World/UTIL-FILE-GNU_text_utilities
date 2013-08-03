@@ -1,0 +1,10 @@
+--- old/textutils-2.0/src/md5sum.c	Mon May  3 17:55:36 1999
++++ gnu/textutils-2.0/src/md5sum.c	Sun Nov 25 01:32:50 2001
+@@ -467,6 +467,7 @@
+ #endif
+ 
+   /* Setting values of global variables.  */
++  initialize_main(&argc, &argv);
+   program_name = argv[0];
+   setlocale (LC_ALL, "");
+   bindtextdomain (PACKAGE, LOCALEDIR);

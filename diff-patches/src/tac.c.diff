@@ -1,0 +1,19 @@
+--- old/textutils-2.0/src/tac.c	Sun Jul  4 09:59:24 1999
++++ gnu/textutils-2.0/src/tac.c	Sun Nov 25 01:05:48 2001
+@@ -52,7 +52,7 @@
+ 
+ #define AUTHORS "Jay Lepreau and David MacKenzie"
+ 
+-#if defined __MSDOS__ || defined _WIN32
++#if defined __MSDOS__ || defined _WIN32 || defined __EMX__
+ /* Define this to non-zero on systems for which the regular mechanism
+    (of unlinking an open file and expecting to be able to write, seek
+    back to the beginning, then reread it) doesn't work.  E.g., on Windows
+@@ -610,6 +610,7 @@
+   int optc, errors;
+   int have_read_stdin = 0;
+ 
++  initialize_main(&argc, &argv);
+   program_name = argv[0];
+   setlocale (LC_ALL, "");
+   bindtextdomain (PACKAGE, LOCALEDIR);
